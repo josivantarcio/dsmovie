@@ -1,9 +1,18 @@
+import axios from "axios";
 import MovieCard from "components/MovieCard";
 //import MovieScore from "components/MovieScore";
 //import MovieStars from "components/MovieStars/index";
 import Pagination from "components/Pagination";
+import { BASE_URL } from "utils/requests";
 
 function Listing(){
+
+    //metodo errado..
+    axios.get(`${BASE_URL}/movies`).then(response => {
+        console.log(response.data)
+    });
+
+
     return(
         <>
         <Pagination />
